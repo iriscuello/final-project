@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/ce405258c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=David+Libre:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-style">
+        <h1>Toronto</h1>
+        <div class="row">
+          <div class="col-6">
+            <ul id="current">
+              <li>17℃ | ℉</li>
+              <li>Mostly Cloudy</li>
+              <li>H 19℃ <span id="lowTemp">L 12℃</span></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <i class="fas fa-cloud-sun" id="icon"></i>
+            <ul id="listWH">
+              <li>Wind:</li>
+              <li>Humidity:</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <a
+          href="https://github.com/iriscuello/Vanilla-weather-app"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Iris Linares
+      </footer>
+    </div>
+
+    <script src="src/vanapp.js"></script>
+  </body>
+</html>
