@@ -4,8 +4,11 @@ h1 {
   font-family: "Bebas Neue", cursive;
 }
 
+h2 {
+  font-size: 20px;
+}
 .weather-style {
-  max-width: 600px;
+  max-width: 700px;
   border: 1px solid grey;
   margin: 40px auto;
   border-radius: 5px;
@@ -37,6 +40,7 @@ footer {
 #listWH {
   padding-top: 20px;
   list-style: none;
+  font-size: 30px;
 }
 
 #lowTemp {
