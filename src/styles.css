@@ -1,7 +1,6 @@
-h1 {
-  font-size: 200px;
-  line-height: 2px;
-  font-family: "David Libre", serif;
+h2 {
+  font-size: 90px;
+  color: rgb(111, 111, 223);
 }
 
 .weather-style {
@@ -21,7 +20,7 @@ footer {
 
 #current {
   list-style: none;
-  font-size: 20px;
+  font-size: 30px;
   padding-left: 10px;
   padding-top: 20px;
 }
