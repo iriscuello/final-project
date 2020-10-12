@@ -39,5 +39,10 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
+var event = new Date("August 19, 1975 23:15 EST+00");
+console.log(event.toLocaleTimeString("en-US"));
+
 let dateDisplayed = document.querySelector("#dateTime");
-dateDisplayed.innerHTML = `${day} ${month} ${date} ${year} ${hour} : ${min}`;
+dateDisplayed.innerHTML = `${day} ${month} ${date} ${year} ${event.toLocaleTimeString(
+  "en-US"
+)}`;
