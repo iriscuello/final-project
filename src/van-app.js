@@ -15,7 +15,7 @@ let min = now.getMinutes();
 let date = now.getDate();
 let year = now.getFullYear();
 let months= [" January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-let month = month[now.getMonth();]
+let month = month[now.getMonth()];
 let days = [
   "Sunday",
   "Monday",
