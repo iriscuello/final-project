@@ -14,7 +14,20 @@ let hour = now.getHours();
 let min = now.getMinutes();
 let date = now.getDate();
 let year = now.getFullYear();
-let months= [" January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let months = [
+  " January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 let month = month[now.getMonth()];
 let days = [
   "Sunday",
@@ -23,8 +36,8 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let date = document.querySelector("#dateTime");
-date.innerHTML = `${day} ${month} ${date} ${year} ${hour} : ${min}';
+date.innerHTML = `${day} ${month} ${date} ${year} ${hour} : ${min}`;
