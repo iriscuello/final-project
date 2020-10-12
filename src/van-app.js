@@ -8,3 +8,23 @@ let city = "New York";
 let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
 axios.get(api).then(displayTemp);
+
+let now = new Date();
+let hour = now.getHours();
+let min = now.getMinutes();
+let date = now.getDate();
+let year = now.getFullYear();
+let months= [" January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let month = month[now.getMonth();]
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+let day = days[now.getDay()];
+let date = document.querySelector("#date");
+date.innerHTML = `${day} ${month} ${date} ${year} ${hour} : ${min}';
