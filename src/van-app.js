@@ -39,5 +39,5 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-let date = document.querySelector("#dateTime");
-date.innerHTML = `${day} ${month} ${date} ${year} ${hour} : ${min}`;
+let dateDisplayed = document.querySelector("#dateTime");
+dateDisplayed.innerHTML = `${day} ${month} ${date} ${year} ${hour} : ${min}`;
