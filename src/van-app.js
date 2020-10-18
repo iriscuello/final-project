@@ -1,13 +1,23 @@
 function displayTemp(response) {
+
+   let temp = Math.round(response.data.main.temp);
+  let faren = (temp * 9) / 5 + 32;
+  let farTemp = document.querySelector("#temperature");
+  farTemp.innerHTML = faren;
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(response.data.main.temp);
 }
 
-let key = "f6daddd2490e280fc02eb01a9840f82a";
-let city = "New York";
-let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
-
-axios.get(api).then(displayTemp);
+function tempToFar(event) {
+  
+  let key = "f6daddd2490e280fc02eb01a9840f82a";
+  let city = "Toronto";
+  let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+  
+  axios.get(api).then(getCurrentTemp);
+}
+let fLink = document.querySelector("#farenheight");
+fLink.addEventListener("click", tempToFar);
 
 let now = new Date();
 let hour = now.getHours();
@@ -39,10 +49,6 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-var event = new Date("August 19, 1975 23:15 EST+00");
-console.log(event.toLocaleTimeString("en-US"));
 
 let dateDisplayed = document.querySelector("#dateTime");
-dateDisplayed.innerHTML = `${day} ${month} ${date} ${year} ${event.toLocaleTimeString(
-  "en-US"
-)}`;
+dateDisplayed.innerHTML = `${day} ${month} ${date} ${year} ${hour}:${min}`;
