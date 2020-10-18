@@ -37,12 +37,9 @@ footer {
   font-size: 60px;
   padding-bottom: 20px;
 }
-#icon {
+image {
   padding-left: 90px;
   font-size: 100px;
-
-  color: #dcdc24;
-  border-radius: 5px;
 }
 
 #listWH {

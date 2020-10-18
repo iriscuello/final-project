@@ -1,9 +1,10 @@
 //function displayTemp(event)
 let key = "f6daddd2490e280fc02eb01a9840f82a";
-let city = "Paris";
+let city = "Toronto";
 let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
 function tempToFar(response) {
+  console.log(response.data);
   let currentCity = document.querySelector("#city");
   currentCity.innerHTML = response.data.name;
   let description = document.querySelector("#description");
@@ -23,6 +24,12 @@ function tempToFar(response) {
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML =
     "Humidity: " + Math.round(response.data.main.humidity) + " %";
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icond}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
   //   let temp = Math.round(response.data.main.temp);
   //   let faren = (temp * 9) / 5 + 32;
   //   let farTemp = document.querySelector("#temperature");
