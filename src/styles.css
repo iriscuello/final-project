@@ -16,6 +16,9 @@ h2 {
   margin-bottom: 0;
 }
 
+#description {
+  text-transform: capitalize;
+}
 footer {
   margin: 0 auto;
   position: relative;
