@@ -12,6 +12,16 @@ function tempToFar(response) {
   let realFeel = document.querySelector("#realFeel");
   realFeel.innerHTML =
     "Feels Like: " + Math.round(response.data.main.feels_like) + "℃";
+  let high = document.querySelector("#hiTemp");
+  high.innerHTML = "H " + Math.round(response.data.main.temp_max) + "℃";
+  let span = document.querySelector("#lowTemp");
+  span.innerHTML = "L " + Math.round(response.data.main.temp_min) + "℃";
+  let windSpeed = document.querySelector("#windSpeed");
+  windSpeed.innerHTML =
+    "Wind Speed: " + Math.round(response.data.wind.speed) + " km/h";
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML =
+    "Humidity: " + Math.round(response.data.main.humidity) + " %";
   //   let temp = Math.round(response.data.main.temp);
   //   let faren = (temp * 9) / 5 + 32;
   //   let farTemp = document.querySelector("#temperature");

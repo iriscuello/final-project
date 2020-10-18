@@ -8,7 +8,7 @@ h2 {
   font-size: 20px;
 }
 .weather-style {
-  max-width: 700px;
+  max-width: 900px;
   border: 1px solid grey;
   margin: 40px auto;
   border-radius: 5px;
@@ -29,9 +29,14 @@ footer {
   list-style: none;
   font-size: 30px;
   padding-left: 10px;
-  padding-top: 20px;
+  padding-top: 50px;
+  margin-bottom: 0;
 }
 
+#temperature {
+  font-size: 60px;
+  padding-bottom: 20px;
+}
 #icon {
   padding-left: 90px;
   font-size: 100px;
@@ -47,5 +52,4 @@ footer {
 }
 
 #lowTemp {
-  padding-left: 15px;
 }
