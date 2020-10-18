@@ -6,7 +6,6 @@ let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key
 function tempToFar(response) {
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
-  console.log(response.data);
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(response.data.main.temp);
   let realFeel = document.querySelector("#realFeel");
