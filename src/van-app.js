@@ -36,7 +36,11 @@ axios.get(api).then(tempToFar);
 
 let now = new Date();
 let hour = now.getHours();
+let twelve = hour % 12 || 12;
 let min = now.getMinutes();
+if (min < 10) {
+  min = `0${min}`;
+}
 let date = now.getDate();
 let year = now.getFullYear();
 let months = [
@@ -66,4 +70,4 @@ let days = [
 let day = days[now.getDay()];
 
 let dateDisplayed = document.querySelector("#dateTime");
-dateDisplayed.innerHTML = `${day} ${month} ${date} ${year} ${hour}:${min}`;
+dateDisplayed.innerHTML = `${day} ${month} ${date} ${year} ${twelve}:${min}`;
