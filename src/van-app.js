@@ -1,9 +1,11 @@
 //function displayTemp(event)
 let key = "f6daddd2490e280fc02eb01a9840f82a";
-let city = "Toronto";
+let city = "Paris";
 let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
 function tempToFar(response) {
+  let currentCity = document.querySelector("#city");
+  currentCity.innerHTML = response.data.name;
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
   let tempElement = document.querySelector("#temperature");
