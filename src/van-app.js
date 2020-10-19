@@ -26,9 +26,8 @@ function tempToFar(response) {
     "Humidity: " + Math.round(response.data.main.humidity) + " %";
   let icon = document.querySelector("#icon");
   icon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icond}@2x.png`
-  );
+    "src"
+  ) = `http://openweathermap.org/img/wn/${response.data.weather[0].icond}@5x.png`;
   icon.setAttribute("alt", response.data.weather[0].description);
   //   let temp = Math.round(response.data.main.temp);
   //   let faren = (temp * 9) / 5 + 32;
