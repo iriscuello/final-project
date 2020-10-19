@@ -1,8 +1,3 @@
-//function displayTemp(event)
-let key = "f6daddd2490e280fc02eb01a9840f82a";
-let city = "Toronto";
-let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
-
 function tempToFar(response) {
   console.log(response.data);
   let currentCity = document.querySelector("#city");
@@ -36,12 +31,20 @@ function tempToFar(response) {
   //   let farTemp = document.querySelector("#temperature");
   //   farTemp.innerHTML = faren;
 }
-axios.get(api).then(tempToFar);
-// function currentTemp() {
 
-// }
-// let fLink = document.querySelector("#farenheight");
-// fLink.addEventListener("click", displayTemp);
+function searchCity(search) {
+  let key = "f6daddd2490e280fc02eb01a9840f82a";
+  let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+  axios.get(api).then(tempToFar);
+}
+
+function returnInputData(event) {
+  event.preventDefault();
+  let dataReturn = document.querySelector("#searchEngine");
+  search(dataReturn.value);
+}
+let searchSubmit = document.querySelector("#search-form");
+searchSubmit.addEventListener("click", returnInputData);
 
 let now = new Date();
 let hour = now.getHours();
