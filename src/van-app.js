@@ -45,11 +45,14 @@ function tempDisplay(response) {
   tempElement.innerHTML = Math.round(response.data.main.temp);
   let realFeel = document.querySelector("#realFeel");
   realFeel.innerHTML =
-    "Feels Like: " + Math.round(response.data.main.feels_like) + "℃";
+    "Feels Like: " + Math.round(response.data.main.feels_like) + "  ℃";
+
+  celTemp = Math.round(response.data.main.temp);
+
   let high = document.querySelector("#hiTemp");
-  high.innerHTML = "H " + Math.round(response.data.main.temp_max) + "℃";
+  high.innerHTML = "H " + Math.round(response.data.main.temp_max) + "  ℃";
   let span = document.querySelector("#lowTemp");
-  span.innerHTML = "L " + Math.round(response.data.main.temp_min) + "℃";
+  span.innerHTML = "L " + Math.round(response.data.main.temp_min) + "  ℃";
   let windSpeed = document.querySelector("#windSpeed");
   windSpeed.innerHTML =
     "Wind Speed: " + Math.round(response.data.wind.speed) + " km/h";
@@ -75,7 +78,35 @@ function returnInputData(event) {
   let dataReturn = document.querySelector("#searchEngine");
   searchCity(dataReturn.value);
 }
-searchCity("Toronto");
+
+function convertTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  celLink.classList.remove("active");
+  fahrenLink.classList.add("active");
+  let fahrenTemp = (celTemp * 9) / 5 + 32;
+
+  tempElement.innerHTML = Math.round(fahrenTemp);
+}
+
+function convertTempToCel(event) {
+  event.preventDefault();
+  let celTempElement = document.querySelector("#temperature");
+  celLink.classList.add("active");
+  fahrenLink.classList.remove("active");
+
+  celTempElement.innerHTML = celTemp;
+}
+
+let celTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", returnInputData);
+
+let fahrenLink = document.querySelector("#fahren");
+fahrenLink.addEventListener("click", convertTemp);
+
+let celLink = document.querySelector("#cel");
+celLink.addEventListener("click", convertTempToCel);
+
+searchCity("Toronto");

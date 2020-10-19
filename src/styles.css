@@ -15,7 +15,10 @@ h2 {
   padding: 20px;
   margin-bottom: 0;
 }
-
+#icon {
+  margin-left: 40px;
+  height: 200px;
+}
 #description {
   text-transform: capitalize;
 }
@@ -36,6 +39,7 @@ footer {
 #temperature {
   font-size: 60px;
   padding-bottom: 20px;
+  padding-right: 10px;
 }
 .wn {
   padding-left: 90px;
@@ -46,4 +50,13 @@ footer {
   padding-top: 20px;
   list-style: none;
   font-size: 30px;
+}
+
+.col-6 .active {
+  cursor: default;
+  color: black;
+}
+
+.col-6 .active:hover {
+  text-decoration: none;
 }
