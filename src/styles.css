@@ -58,6 +58,11 @@ footer {
   font-size: 30px;
 }
 
+.col-6 {
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
 .col-6 .active {
   cursor: default;
   color: black;
@@ -78,4 +83,13 @@ i {
 
 .weather-forecast-temperature {
   font-size: 20px;
+}
+
+strong {
+  padding-right: 10px;
+}
+
+.weather-forecast {
+  padding-left: 10px;
+  margin-left: 10px;
 }

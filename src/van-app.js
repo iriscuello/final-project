@@ -37,6 +37,7 @@ let dateDisplayed = document.querySelector("#dateTime");
 dateDisplayed.innerHTML = `${day} ${month} ${date} ${year} ${twelve}:${min}`;
 
 function tempDisplay(response) {
+  console.log(response.data);
   let currentCity = document.querySelector("#city");
   currentCity.innerHTML = response.data.name;
   let description = document.querySelector("#description");
@@ -69,7 +70,60 @@ function tempDisplay(response) {
 
 function forecastDisplay(response) {
   console.log(response.data);
-  
+  let tuesTempHi = document.querySelector(".tues");
+  let tuesTempLow = document.querySelector("#tues");
+  let tuesIcon = document.querySelector("#fIconTues");
+
+  let wedtuesTempHi = document.querySelector(".wed");
+  let wedTempLow = document.querySelector("#wed");
+  let wedIcon = document.querySelector("#fIconWed");
+
+  let thursTempHi = document.querySelector(".thurs");
+  let thursTempLow = document.querySelector("#thurs");
+  let thursIcon = document.querySelector("#fIconThurs");
+
+  let friTempHi = document.querySelector(".fri");
+  let friTempLow = document.querySelector("#fri");
+  let friIcon = document.querySelector("#fIconFri");
+
+  let satTempHi = document.querySelector(".sat");
+  let satTempLow = document.querySelector("#sat");
+  let satIcon = document.querySelector("#fIconSat");
+
+  tuesTempHi.innerHTML = Math.round(response.data.list[3].main.temp_max);
+  tuesTempLow.innerHTML = Math.round(response.data.list[3].main.temp_min);
+  tuesIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.list[3].weather[0].icon}@2x.png`
+  );
+
+  wedtuesTempHi.innerHTML = Math.round(response.data.list[11].main.temp_max);
+  wedTempLow.innerHTML = Math.round(response.data.list[11].main.temp_min);
+  wedIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.list[11].weather[0].icon}@2x.png`
+  );
+
+  thursTempHi.innerHTML = Math.round(response.data.list[19].main.temp_max);
+  thursTempLow.innerHTML = Math.round(response.data.list[19].main.temp_min);
+  thursIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.list[19].weather[0].icon}@2x.png`
+  );
+
+  friTempHi.innerHTML = Math.round(response.data.list[27].main.temp_max);
+  friTempLow.innerHTML = Math.round(response.data.list[27].main.temp_min);
+  friIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.list[27].weather[0].icon}@2x.png`
+  );
+
+  satTempHi.innerHTML = Math.round(response.data.list[35].main.temp_max);
+  satTempLow.innerHTML = Math.round(response.data.list[35].main.temp_min);
+  satIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.list[35].weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
