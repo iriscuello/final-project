@@ -1,3 +1,8 @@
+.container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 h1 {
   font-size: 90px;
   color: rgb(111, 111, 223);
@@ -14,6 +19,7 @@ h2 {
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 0;
+  background: linear-gradient(to right, #d6a4a4, #dae2f8);
 }
 #icon {
   margin-left: 40px;
@@ -47,7 +53,7 @@ footer {
 }
 
 #listWH {
-  padding-top: 20px;
+  padding-top: 0;
   list-style: none;
   font-size: 30px;
 }
@@ -59,4 +65,17 @@ footer {
 
 .col-6 .active:hover {
   text-decoration: none;
+}
+
+.weather-forecast {
+  text-align: center;
+}
+
+i {
+  font-size: 35px;
+  color: grey;
+}
+
+.weather-forecast-temperature {
+  font-size: 20px;
 }
