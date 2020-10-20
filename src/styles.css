@@ -1,10 +1,15 @@
+body {
+  max-width: 900px;
+  max-height: 700px;
+  display: block;
+  margin: 0 auto;
+}
 .container {
-  margin-top: 40px;
   margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 80px;
   color: rgb(111, 111, 223);
   font-family: "Bebas Neue", cursive;
 }
@@ -13,9 +18,8 @@ h2 {
   font-size: 20px;
 }
 .weather-style {
-  max-width: 900px;
   border: 1px solid grey;
-  margin: 40px auto;
+  margin: 20px 40px;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 0;
@@ -36,9 +40,9 @@ footer {
 
 #current {
   list-style: none;
-  font-size: 30px;
-  padding-left: 10px;
-  padding-top: 50px;
+  font-size: 25px;
+  padding-left: 20px;
+  padding-top: 10px;
   margin-bottom: 0;
 }
 
@@ -55,7 +59,7 @@ footer {
 #listWH {
   padding-top: 0;
   list-style: none;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .col-6 {
@@ -74,6 +78,7 @@ footer {
 
 .weather-forecast {
   text-align: center;
+  line-height: 1;
 }
 
 i {
@@ -92,4 +97,7 @@ strong {
 .weather-forecast {
   padding-left: 10px;
   margin-left: 10px;
+}
+#search-form {
+  margin-top: 15px;
 }
